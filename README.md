@@ -1,5 +1,5 @@
 # Fake Terminal
-##[Live version](http://jusleg.com/fakeTerminal)
+###[Live version](http://jusleg.com/fakeTerminal)
 
 make a browser look like a terminal window
 
