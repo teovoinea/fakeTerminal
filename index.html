@@ -22,7 +22,7 @@
   				font-size:1em;
   				resize: none;
   				border: 0 none;
-  				width: 100%;
+  				width: auto;
   				border: none;
     			overflow: auto;
     			outline: none;
@@ -34,7 +34,7 @@
 		<script>
 			function checkEntry(entry){
 				if(entry == "hello"){
-					return entry+"<br>hi there";
+					return entry+"<br>ChevalDeGuerre: ~admin$ hi there";
 				} else {
 					return entry;
 				}
@@ -43,7 +43,7 @@
 	</head>
 	<body id="terminal">
 		<p id="login"></p>
-		<div id="codeBlock">ChevalDeGuerre: ~admin$ <textarea id="code" rows="1"></textarea></div>
+        <div id="codeBlock" style="display:block;float:left;"><p>ChevalDeGuerre: ~admin$&nbsp;</p></div><div style="float:left; display:block;"><textarea id="code" rows="1"></textarea></div>
 		<script type="text/javascript">
 			var d = new Date();
 			var n = d.toString();
@@ -54,7 +54,7 @@
 			$("#terminal" ).on( "keydown", function(event) {
 				$("#code").focus();
     			if(event.which == 13){
-        			$( "<span>"+checkEntry($("#code").val())+"</span><br>" ).insertBefore( "#codeBlock" );
+        			$( "<span>ChevalDeGuerre: ~admin$ "+checkEntry($("#code").val())+"</span><br>" ).insertBefore( "#codeBlock" );
         			$("#code").val("");
         			$("html, body").animate({ scrollTop: $(document).height() }, 1000);
         			return false;
