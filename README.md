@@ -1,4 +1,5 @@
-# fakeTerminal
+# Fake Terminal
+##[Live version](http://jusleg.com/fakeTerminal)
 make a browser look like a terminal window
 
 I do not know what I am going to do with this. Putting it on the shelf for now...
