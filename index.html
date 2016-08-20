@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<link rel='stylesheet' href='//cdn.jsdelivr.net/font-hack/2.020/css/hack-extended.min.css'>
+		<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+		<style>
+			html{
+				background-color:black;
+				color:green;
+				font-family: Hack, monospace;
+			}
+			p{
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			textarea{
+				padding:0;
+				background: transparent;
+  				color: green;
+  				font-family: Hack, monospace;
+  				font-size:1em;
+  				resize: none;
+  				border: 0 none;
+  				width: 100%;
+  				border: none;
+    			overflow: auto;
+    			outline: none;
+   				-webkit-box-shadow: none;
+   				-moz-box-shadow: none;
+    			box-shadow: none;
+			}
+		</style>
+		<script>
+			function checkEntry(entry){
+				if(entry == "hello"){
+					return entry+"<br>hi there";
+				} else {
+					return entry;
+				}
+			}
+		</script>
+	</head>
+	<body id="terminal">
+		<textarea id="code" rows="1"></textarea>
+		<script type="text/javascript">
+			$("#terminal" ).on( "keydown", function(event) {
+				$("#code").focus();
+    			if(event.which == 13){
+        			$( "<span>"+checkEntry($("#code").val())+"</span><br>" ).insertBefore( "#code" );
+        			$("#code").val("");
+        			$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+        			return false;
+    			}
+			});
+		</script>
+	</body>
+
+</html>
