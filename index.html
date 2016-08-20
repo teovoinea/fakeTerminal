@@ -42,7 +42,14 @@
 		</script>
 	</head>
 	<body id="terminal">
+		<p id="login"></p>
 		<textarea id="code" rows="1"></textarea>
+		<script type="text/javascript">
+			var d = new Date();
+			var n = d.toString();
+			var login= document.getElementById("login");
+			login.innerHTML = "Last login: " + n + " on ttys000";
+		</script>
 		<script type="text/javascript">
 			$("#terminal" ).on( "keydown", function(event) {
 				$("#code").focus();
