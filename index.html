@@ -1,76 +1,36 @@
 <!DOCTYPE HTML>
 <html>
-   <head>
-      <title>Home</title>
-      <link rel="canonical" href="https://www.jusleg.com">
-      <script type="text/javascript">
-            var host = "www.jusleg.com";
-            if ((host == window.location.host) && (window.location.protocol != "https:")){
-                window.location.protocol = "https";
-                console.log("switching");
-            }
-      </script> 
-      <link rel='stylesheet' href='//cdn.jsdelivr.net/font-hack/2.020/css/hack-extended.min.css'>
-      <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-      <style>
-         html{
-         background-color:black;
-         color:green;
-         font-family: Hack, monospace;
-         }
-         p{
-         margin-top: 0;
-         margin-bottom: 0;
-         }
-         textarea{
-         padding:0;
-         background: transparent;
-         color: green;
-         font-family: Hack, monospace;
-         font-size:1em;
-         resize: none;
-         border: 0 none;
-         width: auto;
-         border: none;
-         overflow: auto;
-         outline: none;
-         -webkit-box-shadow: none;
-         -moz-box-shadow: none;
-         box-shadow: none;
-         }
-      </style>
-      <script>
-         function checkEntry(entry){
-         	if(entry == "hello"){
-         		return entry+"<br>ChevalDeGuerre: ~admin$ hi there";
-         	} else {
-         		return entry;
-         	}
-         }
-      </script>
-   </head>
-   <body id="terminal">
-      <p id="login"></p>
-      <div id="codeBlock" style="display:block;float:left;">
-         <p>ChevalDeGuerre: ~admin$&nbsp;</p>
-      </div>
-      <div style="float:left; display:block;"><textarea id="code" rows="1"></textarea></div>
-      <script type="text/javascript">
-         var d = new Date();
-         var n = d.toString();
-         var login= document.getElementById("login");
-         login.innerHTML = "Last login: " + n + " on ttys000";
-      </script>
-      <script type="text/javascript">
-         $("#terminal" ).on( "keydown", function(event) {
-         	$("#code").focus();
-          	if(event.which == 13){
-              		$( "<span>ChevalDeGuerre: ~admin$ "+checkEntry($("#code").val())+"</span><br>" ).insertBefore( "#codeBlock" );
-              		$("#code").val("");
-              		$("html, body").animate({ scrollTop: $(document).height() }, 1000);
-              		return false;
-          	}
-         });
-      </script>
-   </body>
+  <head>
+    <title>Yay!</title>
+    <style>
+      body {
+        padding:0;
+        margin:0;
+        overflow:hidden;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/6/6a/Bob_Barr-2008_cropped.jpg) no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      #cheval{
+        -webkit-animation: fadeinout 10s linear forwards;
+        animation: fadeinout 10s linear forwards;
+        animation-iteration-count:infinite;
+      }
+
+      @-webkit-keyframes fadeinout {
+        0%,100% { opacity: 0.8; }
+        50% { opacity: 1; }
+      }
+
+      @keyframes fadeinout {
+        0%,100% { opacity: 0.8; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <video id="cheval" width="1080" height="1920" autoplay loop>
+      <source src="https://www.dropbox.com/s/4ulyzw0intnxghc/UXPOD.mp4?dl=1" type="video/mp4">
+    </video>
+  </body>
 </html>
