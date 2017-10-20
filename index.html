@@ -43,7 +43,10 @@
          function checkEntry(entry){
          	if(entry == "hello"){
          		return entry+"<br>ChevalDeGuerre: ~admin$ hi there";
-         	} else {
+         	} else if(entry == "ls"){
+               return entry+"Desktop    Downloads  Music     Public     Videos<br>Documents  file.txt   Pictures  Templates";
+            }
+            else {
          		return entry;
          	}
          }
