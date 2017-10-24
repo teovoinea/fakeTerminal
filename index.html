@@ -45,8 +45,9 @@
          		return entry+"<br>ChevalDeGuerre: ~admin$ hi there";
          	} else if(entry == "ls"){
                return entry+"Desktop    Downloads  Music     Public     Videos<br>Documents  file.txt   Pictures  Templates";
-            }
-            else {
+         	} else if(entry == "google") {
+               window.location = "https://google.com";
+          } else {
          		return entry;
          	}
          }
