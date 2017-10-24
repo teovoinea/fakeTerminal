@@ -43,7 +43,9 @@
          function checkEntry(entry){
          	if(entry == "hello"){
          		return entry+"<br>ChevalDeGuerre: ~admin$ hi there";
-         	} else {
+         	} else if(entry == "google") {
+               window.location = "https://google.com";
+            } else {
          		return entry;
          	}
          }
